@@ -1,0 +1,668 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5617F6BC-C80A-4D89-A622-FA289FFEAB61}</ProjectGuid>
+        <MainSource>SoundChecher3.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Release</Config>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <ProjectVersion>18.4</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+        <DCC_N>true</DCC_N>
+        <DCC_DebugInformation>1</DCC_DebugInformation>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_UNSAFE_CAST>true</DCC_UNSAFE_CAST>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Release>2</VerInfo_Release>
+        <VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+        <VerInfo_Locale>1041</VerInfo_Locale>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_K>false</DCC_K>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=3.8.2.73;InternalName=;LegalCopyright=草場友光;LegalTrademarks=;OriginalFilename=;ProductName=Sound Checker;ProductVersion=3.6.2.0;Comments=正式バージョンです</VerInfo_Keys>
+        <DCC_S>false</DCC_S>
+        <VerInfo_MajorVer>3</VerInfo_MajorVer>
+        <DCC_UsePackage>vcl;rtl;vclx;VclSmp;vclshlctrls;$(DCC_UsePackage)</DCC_UsePackage>
+        <VerInfo_MinorVer>8</VerInfo_MinorVer>
+        <DCC_F>false</DCC_F>
+        <VerInfo_Build>73</VerInfo_Build>
+        <DCC_UNSAFE_CODE>true</DCC_UNSAFE_CODE>
+        <DCC_E>false</DCC_E>
+        <SanitizedProjectName>SoundChecher3</SanitizedProjectName>
+        <DCC_UNSAFE_TYPE>true</DCC_UNSAFE_TYPE>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Icon_MainIcon>SoundChecher3_Icon.ico</Icon_MainIcon>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+        <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
+        <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <VerInfo_MinorVer>9</VerInfo_MinorVer>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=3.9.2.73;InternalName=;LegalCopyright=草場友光;LegalTrademarks=;OriginalFilename=;ProductName=Sound Checker;ProductVersion=3.6.2.0;Comments=正式バージョンです</VerInfo_Keys>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppEnableHighDPI>true</AppEnableHighDPI>
+        <BT_BuildType>Debug</BT_BuildType>
+        <DCC_UNSAFE_CODE>false</DCC_UNSAFE_CODE>
+        <DCC_USE_BEFORE_DEF>false</DCC_USE_BEFORE_DEF>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=3.9.2.73;InternalName=;LegalCopyright=草場友光;LegalTrademarks=;OriginalFilename=;ProductName=Sound Checker;ProductVersion=3.9.2.0;Comments=正式バージョンです</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Keys>CompanyName=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductVersion=1.0.0.0;Comments=;ProgramID=com.embarcadero.$(MSBuildProjectName);FileDescription=$(MSBuildProjectName);ProductName=$(MSBuildProjectName)</VerInfo_Keys>
+        <VerInfo_MajorVer>1</VerInfo_MajorVer>
+        <VerInfo_Build>0</VerInfo_Build>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_MinorVer>0</VerInfo_MinorVer>
+        <DCC_Warnings>false</DCC_Warnings>
+        <DCC_Hints>false</DCC_Hints>
+        <VerInfo_Release>0</VerInfo_Release>
+        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
+        <AppEnableHighDPI>true</AppEnableHighDPI>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="Sound3.pas">
+            <Form>Form1</Form>
+        </DCCReference>
+        <DCCReference Include="about.pas">
+            <Form>AboutBox</Form>
+        </DCCReference>
+        <RcItem Include="01piano.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>P001</ResourceId>
+        </RcItem>
+        <RcItem Include="02piano.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>P002</ResourceId>
+        </RcItem>
+        <RcItem Include="03digi_piano.png">
+            <ResourceType>RCDATA</ResourceType>
+            <ResourceId>P003</ResourceId>
+        </RcItem>
+        <RcItem Include="04honkytonk_piano.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P004</ResourceId>
+        </RcItem>
+        <RcItem Include="05rohdes_piano.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P005</ResourceId>
+        </RcItem>
+        <RcItem Include="06electric_piano.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P006</ResourceId>
+        </RcItem>
+        <RcItem Include="07harpsichord.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P007</ResourceId>
+        </RcItem>
+        <RcItem Include="08clavichord.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P008</ResourceId>
+        </RcItem>
+        <RcItem Include="09celesta.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P009</ResourceId>
+        </RcItem>
+        <RcItem Include="100atmosphere.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P100</ResourceId>
+        </RcItem>
+        <RcItem Include="101brightness.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P101</ResourceId>
+        </RcItem>
+        <RcItem Include="102goblins.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P102</ResourceId>
+        </RcItem>
+        <RcItem Include="103echoes.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P103</ResourceId>
+        </RcItem>
+        <RcItem Include="104sci_fi.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P104</ResourceId>
+        </RcItem>
+        <RcItem Include="105sitar.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P105</ResourceId>
+        </RcItem>
+        <RcItem Include="106banjo.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P106</ResourceId>
+        </RcItem>
+        <RcItem Include="107shamisen.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P107</ResourceId>
+        </RcItem>
+        <RcItem Include="108koto.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P108</ResourceId>
+        </RcItem>
+        <RcItem Include="109kalimba.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P109</ResourceId>
+        </RcItem>
+        <RcItem Include="10Glocken.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P010</ResourceId>
+        </RcItem>
+        <RcItem Include="110bagpipe.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P110</ResourceId>
+        </RcItem>
+        <RcItem Include="111fiddle.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P111</ResourceId>
+        </RcItem>
+        <RcItem Include="112shanai.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P112</ResourceId>
+        </RcItem>
+        <RcItem Include="113tinkle_bell.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P113</ResourceId>
+        </RcItem>
+        <RcItem Include="114agogo.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P114</ResourceId>
+        </RcItem>
+        <RcItem Include="115steel_drums.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P115</ResourceId>
+        </RcItem>
+        <RcItem Include="116woodblock.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P116</ResourceId>
+        </RcItem>
+        <RcItem Include="117taiko.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P117</ResourceId>
+        </RcItem>
+        <RcItem Include="118melo_tom.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P118</ResourceId>
+        </RcItem>
+        <RcItem Include="119synth_drum.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P119</ResourceId>
+        </RcItem>
+        <RcItem Include="11musicbox.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P011</ResourceId>
+        </RcItem>
+        <RcItem Include="120reverse_cymbal.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P120</ResourceId>
+        </RcItem>
+        <RcItem Include="121fret_noise.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P121</ResourceId>
+        </RcItem>
+        <RcItem Include="122breath_noise.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P122</ResourceId>
+        </RcItem>
+        <RcItem Include="123seashore.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P123</ResourceId>
+        </RcItem>
+        <RcItem Include="124bird_tweet.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P124</ResourceId>
+        </RcItem>
+        <RcItem Include="125telephone_ring.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P125</ResourceId>
+        </RcItem>
+        <RcItem Include="126helicopter.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P126</ResourceId>
+        </RcItem>
+        <RcItem Include="127applause.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P127</ResourceId>
+        </RcItem>
+        <RcItem Include="128gun_shot.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P128</ResourceId>
+        </RcItem>
+        <RcItem Include="12vibraphon.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P012</ResourceId>
+        </RcItem>
+        <RcItem Include="13marimba.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P013</ResourceId>
+        </RcItem>
+        <RcItem Include="14xylophon.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P014</ResourceId>
+        </RcItem>
+        <RcItem Include="15tubularbell.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P015</ResourceId>
+        </RcItem>
+        <RcItem Include="16dulcimer.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P016</ResourceId>
+        </RcItem>
+        <RcItem Include="17drawbar_organ.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P017</ResourceId>
+        </RcItem>
+        <RcItem Include="18percussive_organ.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P018</ResourceId>
+        </RcItem>
+        <RcItem Include="19rock_organ.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P019</ResourceId>
+        </RcItem>
+        <RcItem Include="20church_organ.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P020</ResourceId>
+        </RcItem>
+        <RcItem Include="21reed_organ.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P021</ResourceId>
+        </RcItem>
+        <RcItem Include="22accordion.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P022</ResourceId>
+        </RcItem>
+        <RcItem Include="23harmonica.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P023</ResourceId>
+        </RcItem>
+        <RcItem Include="24bandoneon.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P024</ResourceId>
+        </RcItem>
+        <RcItem Include="25nylon_guitar.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P025</ResourceId>
+        </RcItem>
+        <RcItem Include="26steel_guitar.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P026</ResourceId>
+        </RcItem>
+        <RcItem Include="27jazz_guitar.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P027</ResourceId>
+        </RcItem>
+        <RcItem Include="28clean_guitar.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P028</ResourceId>
+        </RcItem>
+        <RcItem Include="29mute_guitar.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P029</ResourceId>
+        </RcItem>
+        <RcItem Include="30overdrive.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P030</ResourceId>
+        </RcItem>
+        <RcItem Include="31distortion.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P031</ResourceId>
+        </RcItem>
+        <RcItem Include="32harmonix_guitar.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P032</ResourceId>
+        </RcItem>
+        <RcItem Include="33acoustic_bass.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P033</ResourceId>
+        </RcItem>
+        <RcItem Include="34finger_bass.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P034</ResourceId>
+        </RcItem>
+        <RcItem Include="35pick_bass.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P035</ResourceId>
+        </RcItem>
+        <RcItem Include="36fretless_bass.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P036</ResourceId>
+        </RcItem>
+        <RcItem Include="37slap_bass.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P037</ResourceId>
+        </RcItem>
+        <RcItem Include="38slap_bass2.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P038</ResourceId>
+        </RcItem>
+        <RcItem Include="39synth_bass.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P039</ResourceId>
+        </RcItem>
+        <RcItem Include="40synth_bass2.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P040</ResourceId>
+        </RcItem>
+        <RcItem Include="41violin.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P041</ResourceId>
+        </RcItem>
+        <RcItem Include="42viola.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P042</ResourceId>
+        </RcItem>
+        <RcItem Include="43cello.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P043</ResourceId>
+        </RcItem>
+        <RcItem Include="44contrabass.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P044</ResourceId>
+        </RcItem>
+        <RcItem Include="45tremolo.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P045</ResourceId>
+        </RcItem>
+        <RcItem Include="46pizzicate.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P046</ResourceId>
+        </RcItem>
+        <RcItem Include="47harp.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P047</ResourceId>
+        </RcItem>
+        <RcItem Include="48timpani.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P048</ResourceId>
+        </RcItem>
+        <RcItem Include="49strings.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P049</ResourceId>
+        </RcItem>
+        <RcItem Include="50strings2.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P050</ResourceId>
+        </RcItem>
+        <RcItem Include="51synth_st.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P051</ResourceId>
+        </RcItem>
+        <RcItem Include="52synth_st2.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P052</ResourceId>
+        </RcItem>
+        <RcItem Include="53aah_chorus.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P053</ResourceId>
+        </RcItem>
+        <RcItem Include="54ooh_chorus.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P054</ResourceId>
+        </RcItem>
+        <RcItem Include="55synth_vocal.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P055</ResourceId>
+        </RcItem>
+        <RcItem Include="56orchestra_hit.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P056</ResourceId>
+        </RcItem>
+        <RcItem Include="57trumpet.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P057</ResourceId>
+        </RcItem>
+        <RcItem Include="58trombone.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P058</ResourceId>
+        </RcItem>
+        <RcItem Include="59tuba.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P059</ResourceId>
+        </RcItem>
+        <RcItem Include="60mute_trumpet.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P060</ResourceId>
+        </RcItem>
+        <RcItem Include="61french_horn.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P061</ResourceId>
+        </RcItem>
+        <RcItem Include="62brass.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P062</ResourceId>
+        </RcItem>
+        <RcItem Include="63synth_brass.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P063</ResourceId>
+        </RcItem>
+        <RcItem Include="64synth_brass2.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P064</ResourceId>
+        </RcItem>
+        <RcItem Include="65soprano_sax.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P065</ResourceId>
+        </RcItem>
+        <RcItem Include="66alto_sax.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P066</ResourceId>
+        </RcItem>
+        <RcItem Include="67tenor_sax.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P067</ResourceId>
+        </RcItem>
+        <RcItem Include="68baritone_sax.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P068</ResourceId>
+        </RcItem>
+        <RcItem Include="69oboe.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P069</ResourceId>
+        </RcItem>
+        <RcItem Include="70english_horn.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P070</ResourceId>
+        </RcItem>
+        <RcItem Include="71basoon.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P071</ResourceId>
+        </RcItem>
+        <RcItem Include="72cralinet.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P072</ResourceId>
+        </RcItem>
+        <RcItem Include="73piccolo.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P073</ResourceId>
+        </RcItem>
+        <RcItem Include="74flute.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P074</ResourceId>
+        </RcItem>
+        <RcItem Include="75recorder.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P075</ResourceId>
+        </RcItem>
+        <RcItem Include="76pan_flute.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P076</ResourceId>
+        </RcItem>
+        <RcItem Include="77bottle_blow.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P077</ResourceId>
+        </RcItem>
+        <RcItem Include="78shakuhachi.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P078</ResourceId>
+        </RcItem>
+        <RcItem Include="79whistle.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P079</ResourceId>
+        </RcItem>
+        <RcItem Include="80ocarina.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P080</ResourceId>
+        </RcItem>
+        <RcItem Include="81square.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P081</ResourceId>
+        </RcItem>
+        <RcItem Include="82saw.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P082</ResourceId>
+        </RcItem>
+        <RcItem Include="83calliope.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P083</ResourceId>
+        </RcItem>
+        <RcItem Include="84chiff.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P084</ResourceId>
+        </RcItem>
+        <RcItem Include="85charang.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P085</ResourceId>
+        </RcItem>
+        <RcItem Include="86solo_vocal.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P086</ResourceId>
+        </RcItem>
+        <RcItem Include="87fifth.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P087</ResourceId>
+        </RcItem>
+        <RcItem Include="88bass_lead.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P088</ResourceId>
+        </RcItem>
+        <RcItem Include="89new_age.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P089</ResourceId>
+        </RcItem>
+        <RcItem Include="90warm_pad.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P090</ResourceId>
+        </RcItem>
+        <RcItem Include="91poly_synth.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P091</ResourceId>
+        </RcItem>
+        <RcItem Include="92choir_pad.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P092</ResourceId>
+        </RcItem>
+        <RcItem Include="93bowed_glass.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P093</ResourceId>
+        </RcItem>
+        <RcItem Include="94metal_pad.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P094</ResourceId>
+        </RcItem>
+        <RcItem Include="95halo_pad.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P095</ResourceId>
+        </RcItem>
+        <RcItem Include="96sweep_pad.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P096</ResourceId>
+        </RcItem>
+        <RcItem Include="97ice_rain.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P097</ResourceId>
+        </RcItem>
+        <RcItem Include="98sound_track.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P098</ResourceId>
+        </RcItem>
+        <RcItem Include="99crystal.ico">
+            <ResourceType>ICON</ResourceType>
+            <ResourceId>P099</ResourceId>
+        </RcItem>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>VCLApplication</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">SoundChecher3.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k250.bpl">Microsoft Office 2000 オートメーション サーバー ラッパー コンポーネントのサンプル</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp250.bpl">Microsoft Office XP オートメーション サーバー ラッパー コンポーネントのサンプル</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+            </Platforms>
+            <ModelSupport>False</ModelSupport>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
